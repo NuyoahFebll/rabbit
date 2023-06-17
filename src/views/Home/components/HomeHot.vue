@@ -1,14 +1,17 @@
 <script setup>
 import HomePanel from './HomePanel.vue';
 import { getHotAPI } from '@/apis/home';
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
+
 const hotList = ref([]);
 const getHotList = async () => {
 	const res = await getHotAPI();
 	hotList.value = res.result;
-	console.log(res);
+	// console.log(res);
 };
-getHotList();
+onMounted(() => {
+	getHotList();
+});
 </script>
 
 <template>
@@ -16,7 +19,7 @@ getHotList();
 		<ul class="goods-list">
 			<li v-for="item in hotList" :key="item.id">
 				<RouterLink to="/">
-					<img v-img-lazy="item.picture" :src="item.picture" alt="" />
+					<img v-img-lazy="item.picture" alt="" />
 					<p class="name">{{ item.title }}</p>
 					<p class="desc">{{ item.alt }}</p>
 				</RouterLink>
