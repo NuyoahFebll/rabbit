@@ -3,16 +3,9 @@ import '@/styles/common.scss';
 
 import { createApp } from 'vue';
 import { createPinia } from 'pinia';
-import getCategpry from '@/apis/testAPI';
 
 import App from './App.vue';
 import router from './router';
-
-//测试接口函数
-
-getCategpry().then(res => {
-	console.log(res);
-});
 const app = createApp(App);
 
 app.use(createPinia());
