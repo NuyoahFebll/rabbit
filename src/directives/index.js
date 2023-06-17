@@ -17,7 +17,7 @@ export const lazyPlugin = {
 						el.src = binding.value;
 						setTimeout(() => {
 							stop();
-						}, 1000);
+						}, 3000);
 					}
 				});
 			},
