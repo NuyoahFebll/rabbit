@@ -115,9 +115,9 @@ onMounted(() => getGoods());
 						<!-- 24热榜+专题推荐 -->
 						<div class="goods-aside">
 							<!-- 24小时 -->
-							<DatailHot />
+							<DatailHot :hot-type="1" />
 							<!-- 周 -->
-							<DatailHot />
+							<DatailHot :hot-type="2" />
 						</div>
 					</div>
 				</div>
