@@ -69,7 +69,7 @@ const load = async () => {
 			</el-tabs>
 			<div class="body" v-infinite-scroll="load" :infinite-scroll-disabled="disabled">
 				<!-- 商品列表 -->
-				<GoodsItem v-for="goods in goodList" :goods="goods" :key="goods.id" />
+				<GoodsItem v-for="goods in goodList" :goods="goods" :key="goods.id" :to="`/detail/${goods.id}`" />
 			</div>
 		</div>
 	</div>

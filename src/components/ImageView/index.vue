@@ -93,7 +93,7 @@ watch([elementX, elementY, isOutside], () => {
 			ref="bian"
 			:style="[
 				{
-					backgroundImage: `url(${imageList[0]})`,
+					backgroundImage: `url(${imageList[activeIndex]})`,
 					backgroundPositionX: `${positionX}px`,
 					backgroundPositionY: `${positionY}px`,
 					background: imageList[activeIndex],

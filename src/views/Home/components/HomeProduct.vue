@@ -20,7 +20,7 @@ onMounted(() => {
 	<div class="home-product">
 		<HomePanel :title="cate.name" v-for="cate in goodsProduct" :key="cate.id">
 			<div class="box">
-				<RouterLink class="cover" to="/">
+				<RouterLink class="cover" :to="`/category/${cate.id}`">
 					<img v-img-lazy="cate.picture" />
 					<strong class="label">
 						<span>{{ cate.name }}</span>
@@ -29,7 +29,7 @@ onMounted(() => {
 				</RouterLink>
 				<ul class="goods-list">
 					<li v-for="goods in cate.goods" :key="goods.id">
-						<GoodsItem :goods="goods" />
+						<GoodsItem :goods="goods" :to="`/detail/${goods.id}`" />
 					</li>
 				</ul>
 			</div>
