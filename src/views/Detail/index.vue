@@ -30,6 +30,7 @@ const countChange = count => {
 //添加购物车
 const addCart = () => {
 	if (skuObj.skuId) {
+		ElMessage.success('加入购物车成功');
 		//规格已经选择 触发action
 		cartStore.addCart({
 			id: goods.value.id, //商品id
