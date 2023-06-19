@@ -3,15 +3,15 @@ import { getOrderAPI } from '@/apis/pay.js';
 import { onMounted, ref } from 'vue';
 import { useRoute } from 'vue-router';
 const route = useRoute();
-console.log(route.query.orderId);
+// console.log(route);
 const orderInfo = ref({});
 
-const getOrderInfo = async () => {
-	const res = await getOrderAPI(route.query.id);
-	orderInfo.value = res.result;
-};
+// const getOrderInfo = async () => {
+// 	const res = await getOrderAPI(route.query.id);
+// 	orderInfo.value = res.result;
+// };
 
-onMounted(() => getOrderInfo());
+// onMounted(() => getOrderInfo());
 </script>
 
 <template>

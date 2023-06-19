@@ -2,6 +2,9 @@
 import { getOrderAPI } from '@/apis/pay';
 import { onMounted, ref } from 'vue';
 import { useRoute } from 'vue-router';
+import { useCountDown } from '@/composables/useCountDown';
+const { formatTime, start } = useCountDown();
+start(900);
 // 获取订单数据
 const route = useRoute();
 const payInfo = ref({});
